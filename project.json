@@ -1,0 +1,106 @@
+{
+  "name": "TestSuite_poc",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.8.6]",
+    "UiPath.Mail.Activities": "[1.8.6]",
+    "UiPath.System.Activities": "[20.4.0]",
+    "UiPath.Testing.Activities": "[1.1.2-preview]",
+    "UiPath.UIAutomation.Activities": "[20.4.2]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.4.3.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "e9054fd8-8e8b-4fb2-bb85-c390412e2650",
+        "fileName": "TestCase_Successful.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "d9689862-fc6d-43db-ba37-9f0aea094b08",
+        "fileName": "TestCase_NoData.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "1e3d1b13-993d-42ca-a3be-15acd17e9f98",
+        "fileName": "TestCase_WrongCredentials.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "25339539-1079-476a-aefc-1d11c97937c1",
+        "fileName": "TestCase_PreloginCheck.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3b8b9ca4-8246-41c1-a822-7e61cdac2c38",
+        "dataVariationFilePath": ".variations\\Testing_Sheet1.json",
+        "fileName": "DataDrivenTestCase-001.xaml"
+      }
+    ]
+  },
+  "arguments": {
+    "input": [
+      {
+        "name": "Password",
+        "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "EmailID",
+        "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "required": false,
+        "hasDefault": false
+      }
+    ],
+    "output": [
+      {
+        "name": "LoginPageCheck",
+        "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      },
+      {
+        "name": "LoginStatusCheck",
+        "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      },
+      {
+        "name": "CredentialsCheck",
+        "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      },
+      {
+        "name": "ExtractionFailure",
+        "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      },
+      {
+        "name": "ExtractDataTable",
+        "type": "System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      },
+      {
+        "name": "PreLoginCheck",
+        "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      }
+    ]
+  },
+  "expressionLanguage": "VisualBasic"
+}
