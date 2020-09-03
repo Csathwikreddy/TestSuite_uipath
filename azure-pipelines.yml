@@ -25,13 +25,13 @@ steps:
     projectJsonPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
-    - task: UiPathTest@2
+- task: UiPathTest@2
       inputs:
         testTarget: 'TestProject'
         orchestratorConnection: 'UIPathOrchestratorS'
         folderName: 'Default'
 
-        - task: UiPathDeploy@2
+- task: UiPathDeploy@2
           inputs:
             orchestratorConnection: 'UIPathOrchestratorS'
             packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
