@@ -21,13 +21,13 @@ steps:
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
 - task: UiPathTest@2
-      inputs:
-        testTarget: 'TestProject'
-        orchestratorConnection: 'UIPathOrchestratorS'
-        folderName: 'Default'
+  inputs:
+    testTarget: 'TestProject'
+    orchestratorConnection: 'UIPathOrchestratorS'
+    folderName: 'Default'
 
 - task: UiPathDeploy@2
-          inputs:
-            orchestratorConnection: 'UIPathOrchestratorS'
-            packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
-            folderName: 'Default'
+  inputs:
+    orchestratorConnection: 'UIPathOrchestratorS'
+    packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
+    folderName: 'Default'
