@@ -1,5 +1,5 @@
 # Starter pipeline
- task: UiPathDeploy@2
+# task: UiPathDeploy@2
   inputs:
     orchestratorConnection: 'UIPathOrchestratorS'
     packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
