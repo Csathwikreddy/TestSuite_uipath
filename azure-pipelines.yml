@@ -30,3 +30,9 @@ steps:
     versionType: 'AutoVersion'
     projectJsonPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+
+    - task: UiPathTest@2
+      inputs:
+        testTarget: 'TestProject'
+        orchestratorConnection: 'UIPathOrchestratorS'
+        folderName: 'Default'
