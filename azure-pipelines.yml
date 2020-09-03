@@ -24,3 +24,9 @@ steps:
     orchestratorConnection: 'UIPathOrchestratorS'
     packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
     folderName: 'Default'
+
+- task: UiPathPack@2
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
