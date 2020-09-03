@@ -14,8 +14,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: UiPathPack@2
+- task: UiPathDeploy@2
   inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    orchestratorConnection: 'UIPathOrchestratorS'
+    packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
+    folderName: 'Default'
