@@ -13,8 +13,19 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: UiPathPack@2
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/orchestrator_/?tid=147814&fid=148951'
+    orchestratorConnection: 'UIPathOrchestratorS'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+- task: UiPathTest@2
+  inputs:
+    testTarget: 'TestProject'
+    orchestratorConnection: 'UIPathOrchestratorS'
+    folderName: 'Default'
 - task: UiPathDeploy@2
   inputs:
     orchestratorConnection: 'UIPathOrchestratorS'
-    packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/'
+    packagesPath: 'https://cloud.uipath.com/warpdriveteckwo/warpdriveteckworksDefault/orchestrator_/?tid=147814&fid=148951'
     folderName: 'Default'
